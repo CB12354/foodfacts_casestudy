@@ -44,6 +44,6 @@ csvcut -t -c ingredients_text,product_name,code "$tmp_csv" | csvgrep -c ingredie
 # Prints lines and then a summary: Found N product(s) containing: "<ingredient>"
 count="$(wc -l <"$matches" | tr -d ' ')"
 echo '----'
-echo "Found $count products containing: $ING"
+echo echo "Found ${count} product(s) containing: \"${ING}\""
 
 rm -f "$tmp_csv" "$matches"
